@@ -1,54 +1,70 @@
 import { contact } from '../data/projects'
 
+const socialLinks = [
+  { key: 'github', label: 'GitHub' },
+  { key: 'upwork', label: 'Upwork' },
+  { key: 'fiverr', label: 'Fiverr' },
+  { key: 'linkedin', label: 'LinkedIn' },
+].filter(s => contact[s.key])
+
 export default function Contact() {
   return (
-    <section id="contact" className="px-6 py-24 max-w-4xl mx-auto border-t border-zinc-900">
-      <div className="max-w-2xl">
-        <p className="font-mono text-[#00FF94] text-sm tracking-widest uppercase mb-3">Contact</p>
-        <h2 className="text-4xl font-bold mb-6">Let's Build Something</h2>
-        <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
+    <section id="contact" className="relative px-6 py-20 sm:py-28 max-w-5xl mx-auto overflow-hidden pb-28 sm:pb-20">
+
+      {/* Background orbs */}
+      <div className="orb w-[400px] h-[400px] bg-violet-700/20 bottom-0 left-1/4" />
+      <div className="orb w-[250px] h-[250px] bg-cyan-500/15 top-10 right-0" />
+
+      <div className="relative z-10 max-w-2xl">
+        {/* Header */}
+        <p className="font-mono text-xs text-violet-400 tracking-widest uppercase mb-3">Contact</p>
+        <h2 className="text-3xl sm:text-5xl font-bold mb-6">
+          Let's Build{' '}
+          <span className="gradient-text">Something</span>
+        </h2>
+        <p className="text-dim text-base sm:text-lg mb-10 leading-relaxed">
           Open to freelance projects, agency partnerships, and automation consulting.
-          If you have a problem that involves moving data, connecting systems, or building
-          something on the web — reach out.
+          If you need systems that move data, connect APIs, or ship fast — reach out.
         </p>
 
-        <a
-          href={`mailto:${contact.email}`}
-          className="inline-flex items-center gap-2 px-8 py-4 bg-[#00FF94] text-zinc-950 font-semibold rounded-lg hover:bg-[#00e085] transition-colors text-lg"
-        >
-          {contact.email}
-        </a>
-
-        <div className="flex gap-6 mt-8">
-          {contact.github && (
-            <a href={contact.github} target="_blank" rel="noreferrer"
-               className="text-zinc-500 hover:text-zinc-300 font-mono text-sm transition-colors">
-              GitHub ↗
+        {/* CTA Card */}
+        <div className="gradient-border rounded-2xl p-6 sm:p-8 glass mb-8 bg-violet-950/20">
+          <p className="text-dimmer text-sm font-mono mb-2 uppercase tracking-widest">Email</p>
+          <a
+            href={`mailto:${contact.email}`}
+            className="text-lg sm:text-xl font-semibold text-white hover:gradient-text transition-all break-all"
+          >
+            {contact.email}
+          </a>
+          <div className="mt-6">
+            <a
+              href={`mailto:${contact.email}`}
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold rounded-xl hover:opacity-90 hover:shadow-glow-purple transition-all duration-300 text-sm"
+            >
+              Send a Message
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
             </a>
-          )}
-          {contact.upwork && (
-            <a href={contact.upwork} target="_blank" rel="noreferrer"
-               className="text-zinc-500 hover:text-zinc-300 font-mono text-sm transition-colors">
-              Upwork ↗
-            </a>
-          )}
-          {contact.fiverr && (
-            <a href={contact.fiverr} target="_blank" rel="noreferrer"
-               className="text-zinc-500 hover:text-zinc-300 font-mono text-sm transition-colors">
-              Fiverr ↗
-            </a>
-          )}
-          {contact.linkedin && (
-            <a href={contact.linkedin} target="_blank" rel="noreferrer"
-               className="text-zinc-500 hover:text-zinc-300 font-mono text-sm transition-colors">
-              LinkedIn ↗
-            </a>
-          )}
+          </div>
         </div>
+
+        {/* Social */}
+        {socialLinks.length > 0 && (
+          <div className="flex flex-wrap gap-4">
+            {socialLinks.map(s => (
+              <a key={s.key} href={contact[s.key]} target="_blank" rel="noreferrer"
+                 className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
+                {s.label} ↗
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
-      <div className="mt-16 pt-8 border-t border-zinc-900">
-        <p className="font-mono text-zinc-600 text-sm">
+      {/* Footer */}
+      <div className="relative z-10 mt-20 pt-8 border-t border-white/5">
+        <p className="font-mono text-dimmer text-xs">
           © {new Date().getFullYear()} Lehumo Manala — Built with React + Vite + Tailwind
         </p>
       </div>
