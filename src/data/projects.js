@@ -33,6 +33,16 @@ export const projects = [
   },
   {
     id: 4,
+    title: 'Aleino — Luxury Watch Landing Page',
+    description: 'Premium single-page product landing page for a luxury watch brand. Cinematic hero section, editorial layout, and conversion-focused design built for client review.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
+    liveUrl: 'https://aleino.vercel.app',
+    githubUrl: null,
+    status: 'in-progress',
+    featured: false,
+  },
+  {
+    id: 6,
     title: 'OCR Till Slip Automation',
     description: 'Automated till slip reading pipeline. Captures receipts via WhatsApp, extracts line items and totals using OCR, and logs structured data — zero manual data entry.',
     tags: ['n8n', 'OCR', 'WhatsApp API', 'SendPulse', 'Make'],
@@ -42,7 +52,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 5,
+    id: 7,
     title: 'YouTube Faceless Automation Pipeline',
     description: 'End-to-end automation system for faceless YouTube channels — script generation, AI voiceover, video assembly, and upload scheduling. Zero manual production effort per video.',
     tags: ['n8n', 'AI', 'Remotion', 'ElevenLabs', 'YouTube API'],
@@ -52,7 +62,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 6,
+    id: 8,
     title: 'Voice AI — Soap Production Assistant',
     description: 'Voice-powered AI assistant for a soap manufacturing business. Handles production queries, batch tracking, and operational workflows through natural voice interaction.',
     tags: ['Voice AI', 'Groq Whisper', 'Gemini', 'ElevenLabs', 'n8n'],
@@ -62,7 +72,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 7,
+    id: 9,
     title: 'Personal AI Assistant System',
     description: 'Multi-workflow personal AI assistant handling scheduling, task management, research, and communications — built on n8n with Claude and Gemini as the reasoning layer.',
     tags: ['n8n', 'Claude API', 'Gemini', 'Workflow Automation'],
