@@ -26,7 +26,7 @@ export const projects = [
     title: 'Patternaiq Estates',
     description: 'High-converting lead generation landing page targeting real estate owners. Built to capture and qualify leads through a premium branded experience with 3D scroll effects and a neural background aesthetic.',
     tags: ['Next.js', 'Supabase', 'Tailwind CSS', 'Lead Generation'],
-    liveUrl: null,
+    liveUrl: 'https://patternaiq-estates.vercel.app',
     githubUrl: 'https://github.com/HUMO-collab/patternaiq-estates',
     status: 'live',
     featured: true,
