@@ -16,7 +16,7 @@ export const projects = [
     title: 'Levarto Premium 3D Website',
     description: 'High-end 3D interactive brand website with Apple-style scroll-snap sections, full-screen carousel, and cinematic video integration. Built for a premium appliance brand.',
     tags: ['Next.js', 'Three.js', 'Tailwind CSS', 'GSAP'],
-    liveUrl: null,
+    liveUrl: 'https://levarto-premium-3d-website.vercel.app',
     githubUrl: 'https://github.com/HUMO-collab/levarto-premium-3d-website',
     status: 'live',
     featured: true,
