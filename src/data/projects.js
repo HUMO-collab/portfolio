@@ -37,7 +37,7 @@ export const projects = [
     description: 'Premium single-page product landing page for a luxury watch brand. Cinematic hero section, editorial layout, and conversion-focused design built for client review.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel'],
     liveUrl: 'https://aleino.vercel.app',
-    githubUrl: null,
+    githubUrl: 'https://github.com/HUMO-collab/aleino',
     status: 'in-progress',
     featured: false,
   },
