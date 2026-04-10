@@ -63,17 +63,7 @@ export const projects = [
     status: 'in-progress',
     featured: false,
   },
-  {
-    id: 8,
-    title: 'Voice AI — Soap Production Assistant',
-    description: 'Voice-powered AI assistant for a soap manufacturing business. Handles production queries, batch tracking, and daily operational workflows through natural voice — no screen required.',
-    tags: ['Voice AI', 'Groq Whisper', 'Gemini', 'ElevenLabs', 'n8n'],
-    liveUrl: null,
-    githubUrl: null,
-    imageUrl: null,
-    status: 'in-progress',
-    featured: false,
-  },
+
   {
     id: 9,
     title: 'Personal AI Assistant System',
