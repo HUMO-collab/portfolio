@@ -26,10 +26,10 @@ export default function Hero() {
         {/* Heading */}
         <div>
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight">
-            Pattern
+            Milestones
           </h1>
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight gradient-text">
-            iaq
+            Made.
           </h1>
         </div>
 

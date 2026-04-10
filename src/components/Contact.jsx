@@ -48,7 +48,7 @@ export default function Contact() {
       {/* Footer */}
       <div className="relative z-10 mt-20 pt-8 border-t border-white/5">
         <p className="font-mono text-dimmer text-xs">
-          © {new Date().getFullYear()} Patterniaq — Built with React + Vite + Tailwind
+          © {new Date().getFullYear()} Milestones Made — Built with React + Vite + Tailwind
         </p>
       </div>
     </section>
