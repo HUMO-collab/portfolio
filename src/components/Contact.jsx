@@ -1,12 +1,3 @@
-import { contact } from '../data/projects'
-
-const socialLinks = [
-  { key: 'github', label: 'GitHub' },
-  { key: 'upwork', label: 'Upwork' },
-  { key: 'fiverr', label: 'Fiverr' },
-  { key: 'linkedin', label: 'LinkedIn' },
-].filter(s => contact[s.key])
-
 export default function Contact() {
   return (
     <section id="contact" className="relative px-6 py-20 sm:py-28 max-w-5xl mx-auto overflow-hidden pb-28 sm:pb-20">
@@ -24,42 +15,34 @@ export default function Contact() {
         </h2>
         <p className="text-dim text-base sm:text-lg mb-10 leading-relaxed">
           Open to freelance projects, agency partnerships, and automation consulting.
-          If you need systems that move data, connect APIs, or ship fast — reach out.
+          If you need systems that move data, connect APIs, or ship fast — reach out via GitHub.
         </p>
 
         {/* CTA Card */}
         <div className="gradient-border rounded-2xl p-6 sm:p-8 glass mb-8 bg-violet-950/20">
-          <p className="text-dimmer text-sm font-mono mb-2 uppercase tracking-widest">Email</p>
+          <p className="text-dimmer text-sm font-mono mb-2 uppercase tracking-widest">GitHub</p>
           <a
-            href={`mailto:${contact.email}`}
-            className="text-lg sm:text-xl font-semibold text-white hover:gradient-text transition-all break-all"
+            href="https://github.com/HUMO-collab"
+            target="_blank"
+            rel="noreferrer"
+            className="text-lg sm:text-xl font-semibold text-white hover:gradient-text transition-all"
           >
-            {contact.email}
+            github.com/HUMO-collab
           </a>
           <div className="mt-6">
             <a
-              href={`mailto:${contact.email}`}
+              href="https://github.com/HUMO-collab"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold rounded-xl hover:opacity-90 hover:shadow-glow-purple transition-all duration-300 text-sm"
             >
-              Send a Message
+              View GitHub
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
           </div>
         </div>
-
-        {/* Social */}
-        {socialLinks.length > 0 && (
-          <div className="flex flex-wrap gap-4">
-            {socialLinks.map(s => (
-              <a key={s.key} href={contact[s.key]} target="_blank" rel="noreferrer"
-                 className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
-                {s.label} ↗
-              </a>
-            ))}
-          </div>
-        )}
       </div>
 
       {/* Footer */}

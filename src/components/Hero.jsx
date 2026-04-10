@@ -1,5 +1,3 @@
-import { contact } from '../data/projects'
-
 const stats = [
   { value: '8+', label: 'Projects Built' },
   { value: '5+', label: 'Automation Stacks' },
@@ -53,7 +51,7 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href={`mailto:${contact.email}`}
+            href="#contact"
             className="px-6 py-3.5 glass rounded-xl text-white/70 font-semibold hover:text-white hover:border-violet-500/40 transition-all duration-300 text-sm sm:text-base"
           >
             Get in Touch
@@ -72,30 +70,10 @@ export default function Hero() {
 
         {/* Social links */}
         <div className="flex flex-wrap gap-5 pt-1">
-          {contact.github && (
-            <a href={contact.github} target="_blank" rel="noreferrer"
-               className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
-              GitHub ↗
-            </a>
-          )}
-          {contact.upwork && (
-            <a href={contact.upwork} target="_blank" rel="noreferrer"
-               className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
-              Upwork ↗
-            </a>
-          )}
-          {contact.fiverr && (
-            <a href={contact.fiverr} target="_blank" rel="noreferrer"
-               className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
-              Fiverr ↗
-            </a>
-          )}
-          {contact.linkedin && (
-            <a href={contact.linkedin} target="_blank" rel="noreferrer"
-               className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
-              LinkedIn ↗
-            </a>
-          )}
+          <a href="https://github.com/HUMO-collab" target="_blank" rel="noreferrer"
+             className="font-mono text-xs text-dimmer hover:text-white transition-colors tracking-wide">
+            GitHub ↗
+          </a>
         </div>
       </div>
 

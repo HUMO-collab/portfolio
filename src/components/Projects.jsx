@@ -93,6 +93,17 @@ function ProjectCard({ project, featured }) {
           ))}
         </div>
 
+        {/* Workflow screenshot */}
+        {project.imageUrl && (
+          <div className="mb-4 rounded-xl overflow-hidden border border-white/8">
+            <img
+              src={project.imageUrl}
+              alt={`${project.title} workflow`}
+              className="w-full object-cover max-h-40 opacity-90 group-hover:opacity-100 transition-opacity"
+            />
+          </div>
+        )}
+
         {/* Links */}
         <div className="flex gap-4">
           {project.githubUrl && (
@@ -106,6 +117,9 @@ function ProjectCard({ project, featured }) {
                className="font-mono text-xs text-brand hover:text-white transition-colors">
               Live ↗
             </a>
+          )}
+          {!project.githubUrl && !project.liveUrl && !project.imageUrl && (
+            <span className="font-mono text-xs text-white/20">Workflow — screenshot coming</span>
           )}
         </div>
       </div>

@@ -44,40 +44,44 @@ export const projects = [
   {
     id: 6,
     title: 'OCR Till Slip Automation',
-    description: 'Automated till slip reading pipeline. Captures receipts via WhatsApp, extracts line items and totals using OCR, and logs structured data — zero manual data entry.',
+    description: 'Automated till slip reading pipeline. Captures receipts via WhatsApp, extracts line items and totals using OCR, and logs structured data to Google Sheets — zero manual data entry.',
     tags: ['n8n', 'OCR', 'WhatsApp API', 'SendPulse', 'Make'],
     liveUrl: null,
     githubUrl: null,
+    imageUrl: '/whatsapp-ai-agent-workflow.png',
     status: 'live',
     featured: false,
   },
   {
     id: 7,
     title: 'YouTube Faceless Automation Pipeline',
-    description: 'End-to-end automation system for faceless YouTube channels — script generation, AI voiceover, video assembly, and upload scheduling. Zero manual production effort per video.',
+    description: 'End-to-end automation for faceless YouTube channels — topic research, AI script generation, voiceover via ElevenLabs, video assembly with Remotion, and scheduled upload. Zero manual production per video.',
     tags: ['n8n', 'AI', 'Remotion', 'ElevenLabs', 'YouTube API'],
     liveUrl: null,
     githubUrl: null,
+    imageUrl: '/video-ad-generator-workflow.png',
     status: 'in-progress',
     featured: false,
   },
   {
     id: 8,
     title: 'Voice AI — Soap Production Assistant',
-    description: 'Voice-powered AI assistant for a soap manufacturing business. Handles production queries, batch tracking, and operational workflows through natural voice interaction.',
+    description: 'Voice-powered AI assistant for a soap manufacturing business. Handles production queries, batch tracking, and daily operational workflows through natural voice — no screen required.',
     tags: ['Voice AI', 'Groq Whisper', 'Gemini', 'ElevenLabs', 'n8n'],
     liveUrl: null,
     githubUrl: null,
+    imageUrl: null,
     status: 'in-progress',
     featured: false,
   },
   {
     id: 9,
     title: 'Personal AI Assistant System',
-    description: 'Multi-workflow personal AI assistant handling scheduling, task management, research, and communications — built on n8n with Claude and Gemini as the reasoning layer.',
+    description: 'Multi-workflow AI assistant handling scheduling, task triage, research summaries, and communications — orchestrated on n8n with Claude and Gemini as the reasoning layer.',
     tags: ['n8n', 'Claude API', 'Gemini', 'Workflow Automation'],
     liveUrl: null,
     githubUrl: null,
+    imageUrl: '/status-bot-workflow.png',
     status: 'in-progress',
     featured: false,
   },
@@ -92,7 +96,6 @@ export const skills = [
 ]
 
 export const contact = {
-  email: 'wesdonwynes@gmail.com',
   github: 'https://github.com/HUMO-collab',
   upwork: null,     // Add after profile is live
   fiverr: null,     // Add after gig is live
