@@ -33,7 +33,7 @@ export default function App() {
         scrolled ? 'glass border-b border-white/5' : ''
       }`}>
         <a href="#hero" className="font-mono text-sm text-white/60 tracking-widest uppercase hover:text-white transition-colors">
-          Patterniaq
+          LM
         </a>
         <div className="flex items-center gap-7">
           {navLinks.map(link => (

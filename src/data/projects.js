@@ -1,11 +1,11 @@
-// Portfolio data — Lehumo Manala / Patterniaq
+// Portfolio data — Lehumo Manala
 // All claims are verified. Items marked [Needs Verification] are estimates.
 
 export const projects = [
   {
     id: 1,
-    title: 'Patterniaq AIOS — AI Operating System',
-    tagline: 'The operating brain of a one-person AI agency.',
+    title: 'My AIOS — Personal AI Operating System',
+    tagline: 'The operating brain I built to run my own business without being the bottleneck.',
     problem: 'Running an AI agency solo means every lead, client update, revenue check, and task lands on the founder. Without systems, the founder IS the bottleneck.',
     solution: '6 interconnected n8n workflows that handle lead intake, client onboarding, revenue reporting, and pipeline visibility — all delivered to Telegram with zero manual intervention.',
     impact: [

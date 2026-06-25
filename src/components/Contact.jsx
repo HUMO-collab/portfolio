@@ -85,10 +85,10 @@ export default function Contact() {
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <p className="text-white font-semibold">Lehumo Manala</p>
-            <p className="text-dimmer text-xs font-mono mt-0.5">AI Solutions Architect · Patterniaq · Johannesburg, SA</p>
+            <p className="text-dimmer text-xs font-mono mt-0.5">AI Solutions Architect · Johannesburg, SA</p>
           </div>
           <p className="font-mono text-dimmer text-xs">
-            © {new Date().getFullYear()} Patterniaq — Built with React + Vite + Tailwind
+            © {new Date().getFullYear()} Lehumo Manala — Built with React + Vite + Tailwind
           </p>
         </div>
       </div>

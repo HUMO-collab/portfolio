@@ -35,9 +35,9 @@ export default function Hero() {
 
         {/* Sub */}
         <p className="text-base sm:text-xl text-dim max-w-2xl leading-relaxed">
-          I'm <span className="text-white font-semibold">Lehumo Manala</span> — AI Solutions Architect and founder of{' '}
-          <span className="text-white font-semibold">Patterniaq</span>. I build AI operating systems that automate
-          operations, remove bottlenecks, and generate measurable outcomes —{' '}
+          I'm <span className="text-white font-semibold">Lehumo Manala</span> — AI Solutions Architect based in
+          Johannesburg, South Africa. I build AI operating systems that automate operations, remove bottlenecks,
+          and generate measurable outcomes —{' '}
           <span className="text-white font-medium">then hand them over running.</span>
         </p>
 

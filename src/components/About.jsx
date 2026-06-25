@@ -34,9 +34,9 @@ export default function About() {
               modular, observable, and reliable enough to run unsupervised.
             </p>
             <p>
-              Patterniaq is the agency I built to prove this model works.
-              6 active n8n workflows run the entire operation — lead intake, client onboarding, daily revenue
-              briefings, pipeline visibility — without me doing anything manually.
+              I've applied this to my own business: 6 active n8n workflows handle lead intake, client onboarding,
+              daily revenue briefings, and pipeline visibility — without me doing anything manually.
+              I only build what I've already run myself.
             </p>
           </div>
 
