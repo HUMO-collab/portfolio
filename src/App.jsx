@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { contact, hero, why, story, projects, skills, soft, process } from './content'
+import { contact, hero, why, story, projects, behind, skills, soft, process } from './content'
 
 const NAV = [
   ['why', 'Why me'],
@@ -122,6 +122,20 @@ export default function App() {
                 <ul>{p.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <Head eyebrow="Behind the build" title="Where the work actually happens." />
+            <div className="grid g3">
+              {behind.map((b) => (
+                <figure className="shot reveal" key={b.src}>
+                  <img src={b.src} alt={b.alt} loading="lazy" />
+                  <figcaption>{b.cap}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 

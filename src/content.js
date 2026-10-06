@@ -2,7 +2,7 @@
 // If it is not provable, it is not on the site. Edit here, the site updates.
 
 export const contact = {
-  email: '', // TODO(Humo): add the email you want public; the button appears automatically
+  email: 'mcebisenimanalalehumo@gmail.com',
   linkedin: 'https://www.linkedin.com/in/mcebisenimanala',
   github: 'https://github.com/HUMO-collab',
   site: 'https://pattern-ai-q.com',
@@ -122,6 +122,12 @@ export const projects = [
     stack: ['Python', 'Statistics', 'MT5'],
     color: 'b',
   },
+]
+
+export const behind = [
+  { src: '/build-n8n.jpg', cap: 'An n8n AI-agent workflow on the canvas', alt: 'Photo of an n8n workflow with a chat trigger and AI agent node' },
+  { src: '/build-terminal.jpg', cap: 'Claude Code in the terminal: "Welcome back humo!"', alt: 'Photo of a terminal running Claude Code' },
+  { src: '/build-skills.jpg', cap: 'Installing agent skills for a video pipeline', alt: 'Photo of a terminal installing agent skills' },
 ]
 
 export const skills = [
