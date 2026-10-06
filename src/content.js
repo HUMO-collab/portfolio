@@ -20,6 +20,11 @@ export const hero = {
   ],
 }
 
+export const ticker = [
+  'n8n', 'Supabase', 'WhatsApp API', 'Claude API', 'Agent Reach', 'Next.js', 'Three.js', 'Python',
+  'Telegram bots', 'LinkedIn API', 'Airtable', 'SOLIDWORKS', 'Vercel', 'Remotion', 'PostgreSQL',
+]
+
 export const why = [
   {
     t: 'Engineer-grade verification',
@@ -30,31 +35,104 @@ export const why = [
     d: 'Not a demo, not a slide. A workflow with alerts, a backup, a test, and a note on what breaks. Your business should not need me on a Tuesday.',
   },
   {
+    t: 'I have worked the floor',
+    d: 'I have bartended, managed shifts and resold stock. I know what a repetitive, manual, easy-to-drop process feels like from the inside, so I build for the person doing it.',
+  },
+  {
     t: 'I show up with a diagnosis',
     d: 'On a live carpet-retailer site I measured mobile Lighthouse 34/100, 9.0 s LCP and ~18-30 MB per visit before proposing anything. You get numbers, then a plan.',
   },
-  {
-    t: 'Honest about where I am',
-    d: 'Early-stage and pre-revenue, with real systems in production and the receipts below. You get the founder, not a layer of account managers.',
-  },
 ]
 
-export const story = [
+export const journey = [
   {
-    h: 'The engineer',
-    p: 'I study Metallurgical Engineering at Tshwane University of Technology. Leaching kinetics, solvent extraction, thermodynamics: fields where an unchecked assumption costs real money. That habit is the foundation of how I build software.',
+    when: 'The floor',
+    role: 'Bartender',
+    saw: 'Orders, regulars, a rush, and the same small jobs repeated every shift. Speed, memory and reading people were the whole job.',
+    led: 'I learned how a business actually runs at ground level, and how much of it is repetition that a system could hold.',
   },
   {
-    h: 'The bottleneck',
-    p: 'In June 2026 I audited myself: my April systems had failed because I was doing everything by hand. I was the bottleneck. So I rebuilt the way I work around systems that run without me, and started with my own business first.',
+    when: 'The back office',
+    role: 'Part-time manager',
+    saw: 'Running shifts for an events and craft-beer business meant bookings, staffing, stock and follow-up, all living in chats and heads.',
+    led: 'This is where I first saw the "follow-up problem": leads and customers do not leave, they just get answered late.',
   },
   {
-    h: 'The company',
-    p: 'Patterniaq is an AI-automation agency I run solo from Johannesburg. Outbound custom Loom videos are my validated channel, getting discovery calls booked. I am pre-revenue and openly so, which is why every claim on this page has a receipt.',
+    when: 'The hustle',
+    role: 'Reseller',
+    saw: 'Depop resale sourced from AliExpress in listing batches, and sneaker resale with three supplier relationships and buying clients. Margins, sourcing and listing were all manual.',
+    led: 'It taught me unit economics, and that the real bottleneck is rarely the product. It is the repeatable work around it, which became the Footfusionwear brand.',
+  },
+  {
+    when: 'The lab',
+    role: 'Metallurgical engineering',
+    saw: 'Kinetics, thermodynamics, solvent extraction. A field where an unmeasured assumption costs real money.',
+    led: 'This gave me the habit I now apply to software: test it, put a number on it, and say so when it fails.',
+  },
+  {
+    when: 'Now',
+    role: 'AI systems builder',
+    saw: 'Every one of those jobs had a loop a person repeated by hand. AI and automation finally make those loops cheap to remove.',
+    led: 'That is the obsession: find the loop, measure it, replace it with something that runs, and hand it over.',
   },
 ]
 
 export const projects = [
+  {
+    id: 'research',
+    tag: 'Research pipeline · Agent Reach',
+    title: 'Internet research pipeline',
+    line: 'Question in, sourced and honestly-labelled answer out, built on Agent Reach.',
+    points: [
+      'Agent Reach gives my agents one routed way to read 16 platforms: web, X, Reddit, YouTube, GitHub, LinkedIn, RSS and more.',
+      'Method: question, parallel fetch, notes saved to disk with source links, every claim tagged verified or UNVERIFIED, then a decision memo.',
+      'Outputs so far: a 6-leg algo-trading study (0 strategies executable at a R330 account), an InSAR mining study that caught a retracted paper, and an open-model licensing check that found one "open" model needs written commercial authorisation.',
+      'The rule that makes it trustworthy: if a page failed to load, the memo says so instead of filling the gap.',
+    ],
+    imgs: [
+      { src: '/build-terminal.jpg', alt: 'Terminal running Claude Code', cap: 'Claude Code session', shape: 'wide' },
+      { src: '/build-skills.jpg', alt: 'Terminal installing agent skills', cap: 'Installing agent skills', shape: 'wide' },
+    ],
+    stack: ['Agent Reach', 'Claude Code', 'Python', 'Markdown vault'],
+  },
+  {
+    id: 'invest',
+    tag: 'Finance · investing system',
+    title: 'My EasyEquities investing system',
+    line: 'I treat my own money like an engineering problem: costs first, evidence before action.',
+    points: [
+      'I invest through EasyEquities, so I modelled its real costs before sizing anything: about 1% brokerage, free EFT deposits, R150 per cash-out.',
+      'That cash-out fee is 45% of a R330 account, so the system is built around slow holds, not frequent trading.',
+      'No strategy gets money until it passes a written evidence bar. I built a significance gate (Bayesian P(edge), Deflated Sharpe, bootstrap CI) and ran it on my own ideas.',
+      'Result: 0 of 208 configs passed and 10 of 10 trading families died, which is exactly why the plan is patient capital instead of a clever trick.',
+    ],
+    facts: [
+      { k: '~1%', v: 'EasyEquities brokerage' },
+      { k: '45%', v: 'R150 cash-out vs a R330 account' },
+      { k: '0 / 208', v: 'strategy configs that passed the gate' },
+      { k: '10 / 10', v: 'trading families killed by data' },
+    ],
+    note: 'Personal process, not financial advice.',
+    stack: ['EasyEquities', 'Python', 'Statistics', 'Cost modelling'],
+  },
+  {
+    id: 'linkedin',
+    tag: 'Content system · n8n + Airtable',
+    title: 'LinkedIn content system',
+    line: 'A queue that drafts, schedules and posts carousels to my profile without me touching it.',
+    points: [
+      'A 37-node n8n workflow runs four slots a day (9:00, 12:00, 15:00, 18:00 SAST): next queued post from Airtable, lock, post, mark done, Telegram confirmation.',
+      'I proved the old posting node had never been able to publish a carousel, then rebuilt it on LinkedIn\'s Documents API so a PDF becomes a real swipeable carousel.',
+      'Found and fixed a silent bug: two post types had no error wiring, so failures vanished and rows stuck at "Posting". Now they alert and mark Failed.',
+      'Designed the carousels myself in HTML, rendered with headless Chrome into PDF, hosted in a public Supabase bucket. The first carousel went live on 30 Sep 2026.',
+    ],
+    imgs: [
+      { src: '/li-cover.jpg', alt: 'LinkedIn carousel cover slide', cap: 'Cover slide', shape: 'tall' },
+      { src: '/li-delivery.jpg', alt: 'LinkedIn carousel layer slide', cap: 'Layer slide', shape: 'tall' },
+      { src: '/li-menu.jpg', alt: 'LinkedIn carousel menu slide', cap: 'Menu slide', shape: 'tall' },
+    ],
+    stack: ['n8n', 'Airtable', 'LinkedIn API', 'Supabase', 'Headless Chrome'],
+  },
   {
     id: 'futuredev',
     tag: 'Client system · property maintenance',
@@ -67,7 +145,6 @@ export const projects = [
       'Production test suites: 16/16, 26/26 and 50/50 click-through before shipping fixes.',
     ],
     stack: ['Next.js', 'Supabase', 'n8n', 'WhatsApp', 'Vercel'],
-    color: 'a',
   },
   {
     id: 'aios',
@@ -79,8 +156,8 @@ export const projects = [
       'Lead goes from form to database to Telegram alert automatically; a nightly sweep flags failures and drift.',
       'Qualify-first funnel: Tally application, booking, then WhatsApp nurture only after opt-in, tested 40/40 offline.',
     ],
+    imgs: [{ src: '/build-n8n.jpg', alt: 'n8n AI agent workflow on the canvas', cap: 'An n8n AI-agent workflow on the canvas', shape: 'wide' }],
     stack: ['n8n', 'Supabase', 'Telegram', 'Tally', 'Cal.com'],
-    color: 'b',
   },
   {
     id: 'mcad',
@@ -93,49 +170,30 @@ export const projects = [
       'Wraps a real service: three packages, client intake and a deposit gate.',
     ],
     stack: ['Python', 'COM automation', 'SOLIDWORKS'],
-    color: 'c',
   },
   {
     id: 'sites',
     tag: 'Web · e-commerce & brand',
     title: 'FootFusionWear storefront and Levarto 3D site',
-    line: 'Brand sites, tuned until they were measurably right.',
+    line: 'Brand sites, tuned until they were measurably right. The reseller years, productised.',
     points: [
       'FootFusionWear (live): found and fixed a mobile-menu bug caused by backdrop-filter, and a stray config that was silently disabling redirects and security headers.',
       'Image weight cut 3.94 MB to 1.16 MB; 8-page audit, 61 links, 0 problems.',
       'Levarto: cinematic 3D site (Next.js, Three.js, GSAP) with 3 production automation workflows behind it.',
     ],
+    imgs: [{ src: '/ff-pack.jpg', alt: 'FootFusionWear packaging concept sheet', cap: 'FootFusionWear packaging concept', shape: 'wide' }],
     stack: ['Next.js', 'Three.js', 'GSAP', 'Tailwind'],
     link: 'https://footfusionwear.vercel.app',
-    color: 'a',
   },
-  {
-    id: 'research',
-    tag: 'Research discipline',
-    title: 'Systematic trading research: the honest failure',
-    line: 'The project that taught me to kill my own ideas.',
-    points: [
-      'Built a backtest, paper-trade and live-gate pipeline with a significance test (Bayesian P(edge), Deflated Sharpe).',
-      'Result: 0 of 208 strategy configurations passed; 10 of 10 strategy families dead on correct-hour retests.',
-      'Fixed two real bugs found along the way: a forming-bar phantom signal and a position-size error that overstated USDJPY 158x.',
-    ],
-    stack: ['Python', 'Statistics', 'MT5'],
-    color: 'b',
-  },
-]
-
-export const behind = [
-  { src: '/build-n8n.jpg', cap: 'An n8n AI-agent workflow on the canvas', alt: 'Photo of an n8n workflow with a chat trigger and AI agent node' },
-  { src: '/build-terminal.jpg', cap: 'Claude Code in the terminal: "Welcome back humo!"', alt: 'Photo of a terminal running Claude Code' },
-  { src: '/build-skills.jpg', cap: 'Installing agent skills for a video pipeline', alt: 'Photo of a terminal installing agent skills' },
 ]
 
 export const skills = [
   { g: 'Automation', i: ['n8n', 'Webhooks & REST', 'WhatsApp / SendPulse', 'Telegram bots', 'Tally', 'Make'] },
-  { g: 'AI', i: ['Claude API', 'Agent design', 'Prompt engineering', 'Voice / video pipelines', 'HyperFrames / Remotion'] },
+  { g: 'AI & research', i: ['Claude API', 'Agent design', 'Agent Reach', 'Prompt engineering', 'Voice / video pipelines'] },
   { g: 'Build', i: ['React / Next.js', 'Tailwind', 'Three.js / GSAP', 'Python', 'Node.js'] },
-  { g: 'Data & Ops', i: ['Supabase / PostgreSQL', 'Row-level security', 'Vercel', 'VPS / Ubuntu', 'Git / GitHub'] },
-  { g: 'Engineering', i: ['Hydrometallurgy', 'Reaction kinetics', 'SOLIDWORKS', 'Process thinking', 'Statistics'] },
+  { g: 'Data & Ops', i: ['Supabase / PostgreSQL', 'Row-level security', 'Airtable', 'Vercel', 'Git / GitHub'] },
+  { g: 'Engineering & finance', i: ['Hydrometallurgy', 'Reaction kinetics', 'SOLIDWORKS', 'Statistics', 'Cost modelling'] },
+  { g: 'People', i: ['Customer-facing service', 'Shift management', 'Sourcing & resale', 'Negotiation', 'Loom outreach'] },
 ]
 
 export const soft = [

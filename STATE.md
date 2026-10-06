@@ -7,3 +7,4 @@ Photo: public/humo.jpg = crop of IG story (low-res, grayscale). Replace with a r
 
 - [12:00] CHECKPOINT: v2 built (content.js claims register, App.jsx, index.css), desktop+500px mobile QA pass, photo cropped | NEXT: Humo sets email in src/content.js + swaps photo; then push + deploy (not pushed yet)
 - [12:10] CHECKPOINT: email set, photos polished (2x, graded), Behind-the-build strip added | NEXT: Humo says GO -> push + Vercel deploy
+- [12:40] CHECKPOINT: 3 new projects (research/Agent Reach, EasyEquities investing, LinkedIn system), journey timeline, motion layer, project images | NEXT: Humo reviews, says GO -> push + deploy
