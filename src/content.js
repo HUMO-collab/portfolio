@@ -13,8 +13,8 @@ export const hero = {
   title: ['I build systems', 'that keep running', 'after I leave.'],
   sub: 'Lehumo "Humo" Manala. Engineering student and founder of Patterniaq. I turn messy, manual business processes into automations that are tested, monitored and handed over working.',
   stats: [
-    { n: '6', l: 'n8n workflows running my own business' },
-    { n: '68', l: 'automated tests on my CAD-automation CLI' },
+    { n: '1 yr', l: 'in the AI space, building systems' },
+    { n: 'R5k+', l: 'earned across client and side projects' },
     { n: '26', l: 'live tickets migrated, field-checked 26/26' },
     { n: '10/10', l: 'trading ideas I tested and killed with data' },
   ],
@@ -35,8 +35,8 @@ export const why = [
     d: 'Not a demo, not a slide. A workflow with alerts, a backup, a test, and a note on what breaks. Your business should not need me on a Tuesday.',
   },
   {
-    t: 'I have worked the floor',
-    d: 'I have bartended, managed shifts and resold stock. I know what a repetitive, manual, easy-to-drop process feels like from the inside, so I build for the person doing it.',
+    t: 'I have been selling since primary school',
+    d: 'Candy, then paid help, then affiliate links and reselling, then a bar job for 1 year 7 months. I know what manual, repetitive work feels like from the inside, so I build for the person doing it.',
   },
   {
     t: 'I show up with a diagnosis',
@@ -46,34 +46,40 @@ export const why = [
 
 export const journey = [
   {
-    when: 'The floor',
-    role: 'Bartender',
-    saw: 'Orders, regulars, a rush, and the same small jobs repeated every shift. Speed, memory and reading people were the whole job.',
-    led: 'I learned how a business actually runs at ground level, and how much of it is repetition that a system could hold.',
+    when: 'Primary school',
+    role: 'Selling candy',
+    saw: 'My first business: buy sweets, sell them on at school. Nobody taught me margins, I just noticed the gap.',
+    led: 'I learned that a small spread, repeated, becomes money.',
   },
   {
-    when: 'The back office',
-    role: 'Part-time manager',
-    saw: 'Running shifts for an events and craft-beer business meant bookings, staffing, stock and follow-up, all living in chats and heads.',
-    led: 'This is where I first saw the "follow-up problem": leads and customers do not leave, they just get answered late.',
+    when: 'Grade 8',
+    role: 'Getting paid for value',
+    saw: 'I helped a classmate with an assignment and got paid. I used that cash to buy my first Bluetooth speaker.',
+    led: 'That was the lesson that stuck: you make money by saving and by creating value for someone else.',
   },
   {
-    when: 'The hustle',
-    role: 'Reseller',
-    saw: 'Depop resale sourced from AliExpress in listing batches, and sneaker resale with three supplier relationships and buying clients. Margins, sourcing and listing were all manual.',
-    led: 'It taught me unit economics, and that the real bottleneck is rarely the product. It is the repeatable work around it, which became the Footfusionwear brand.',
+    when: 'High school',
+    role: 'Affiliate and reseller',
+    saw: 'I became an affiliate for a reseller selling earbuds: every person I sent their way earned me a percentage. Then I started reselling myself.',
+    led: 'I saw that distribution is a product too, and that sending the right people to the right place pays.',
   },
   {
-    when: 'The lab',
-    role: 'Metallurgical engineering',
-    saw: 'Kinetics, thermodynamics, solvent extraction. A field where an unmeasured assumption costs real money.',
-    led: 'This gave me the habit I now apply to software: test it, put a number on it, and say so when it fails.',
+    when: 'First year, second semester',
+    role: 'Bartender, then part-time manager',
+    saw: 'My first real job. I worked for 1 year and 7 months while still reselling, later managing shifts for an events and craft-beer business: bookings, staffing, stock and follow-up, all in chats and heads.',
+    led: 'This is where I met the follow-up problem: customers and leads do not leave, they just get answered late. I wanted to produce content, answer clients and list products while I was in class.',
+  },
+  {
+    when: 'Getting into AI',
+    role: 'Teaching myself to build',
+    saw: 'I set up my own VPS from YouTube tutorials, working in a cloud terminal on Hostinger. Then I built my own personal agent on Meta and OpenRouter.',
+    led: 'I liked building systems more than anything else I had done. That is what led to Patterniaq.',
   },
   {
     when: 'Now',
-    role: 'AI systems builder',
-    saw: 'Every one of those jobs had a loop a person repeated by hand. AI and automation finally make those loops cheap to remove.',
-    led: 'That is the obsession: find the loop, measure it, replace it with something that runs, and hand it over.',
+    role: 'Founder, Patterniaq',
+    saw: 'One year in the AI space. R5k+ earned across different projects, some money lost, mistakes made, and I stayed curious through all of it. I study Metallurgical Engineering at TUT, and that training is why I test everything.',
+    led: 'The obsession in one line: find the loop people repeat by hand, measure it, replace it with something that runs, and hand it over.',
   },
 ]
 
@@ -98,11 +104,12 @@ export const projects = [
   {
     id: 'invest',
     tag: 'Finance · investing system',
-    title: 'My EasyEquities investing system',
-    line: 'I treat my own money like an engineering problem: costs first, evidence before action.',
+    title: 'EasyEquities investment tracker',
+    line: 'A system that tracks my investments and helps me decide what is worth investing in.',
     points: [
-      'I invest through EasyEquities, so I modelled its real costs before sizing anything: about 1% brokerage, free EFT deposits, R150 per cash-out.',
-      'That cash-out fee is 45% of a R330 account, so the system is built around slow holds, not frequent trading.',
+      'It tracks my EasyEquities holdings in one place and helps me judge what is worth putting money into next.',
+      'I modelled the real costs of the platform first: about 1% brokerage, free EFT deposits, R150 per cash-out.',
+      'That cash-out fee is 45% of a R330 account, so the approach is slow holds, not frequent trading.',
       'No strategy gets money until it passes a written evidence bar. I built a significance gate (Bayesian P(edge), Deflated Sharpe, bootstrap CI) and ran it on my own ideas.',
       'Result: 0 of 208 configs passed and 10 of 10 trading families died, which is exactly why the plan is patient capital instead of a clever trick.',
     ],
@@ -202,6 +209,7 @@ export const soft = [
   { t: 'Ownership', d: 'I audit my own work harder than a client would.' },
   { t: 'Fast learner', d: 'Hands-on, in layers: new stack to working build quickly.' },
   { t: 'Clear communication', d: 'Short answers, numbers over adjectives.' },
+  { t: 'Curiosity', d: 'Still learning every week, and open about what I got wrong.' },
   { t: 'Calm under pressure', d: 'Study, business and delivery run in parallel; I plan, then execute.' },
 ]
 

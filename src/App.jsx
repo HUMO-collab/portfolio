@@ -192,7 +192,7 @@ export default function App() {
 
         <section id="story" style={{ background: 'var(--bg2)' }}>
           <div className="wrap">
-            <Head eyebrow="02 / How I got here" title="Four jobs, one obsession." lead="Bartender, manager, reseller, engineer. Each one showed me a loop that people repeat by hand, and that is what I now build for." />
+            <Head eyebrow="02 / How I got here" title="From selling candy to building systems." lead="Every step showed me the same thing: people repeat work by hand, and creating value is how you get paid. That is what I build for now." />
             <div className="timeline" id="tl">
               <div className="tl-line" />
               {journey.map((j, i) => (
