@@ -9,14 +9,14 @@ export const contact = {
 }
 
 export const hero = {
-  kicker: 'Metallurgical engineer · AI systems builder · Johannesburg',
-  title: ['I build systems', 'that keep running', 'after I leave.'],
-  sub: 'Lehumo "Humo" Manala. Engineering student and founder of Patterniaq. I turn messy, manual business processes into automations that are tested, monitored and handed over working.',
+  kicker: 'Pretoria, South Africa · open to remote collaboration',
+  title: ['From the shop floor', 'to systems that', 'keep working.'],
+  sub: 'I’m Lehumo “Humo” Manala: a metallurgical engineering student and the founder of Patterniaq. I build practical AI and automation systems for the repetitive work that slows growing businesses down.',
   stats: [
-    { n: '1 yr', l: 'in the AI space, building systems' },
-    { n: 'R5k+', l: 'earned across client and side projects' },
-    { n: '26', l: 'live tickets migrated, field-checked 26/26' },
-    { n: '10/10', l: 'trading ideas I tested and killed with data' },
+    { n: '26', l: 'client tickets migrated and checked field by field' },
+    { n: '6', l: 'core workflows in my own operating system' },
+    { n: '68', l: 'passing tests for my CAD automation tool' },
+    { n: '1', l: 'rule: report what the evidence actually shows' },
   ],
 }
 
@@ -219,3 +219,5 @@ export const process = [
   { n: '03', t: 'Build & test', d: 'Small chunks, automated tests, checkpoints you can see.' },
   { n: '04', t: 'Hand over running', d: 'Monitoring, backup, and a plain-English runbook.' },
 ]
+
+
