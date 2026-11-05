@@ -2,12 +2,14 @@ import { useEffect, useRef, useState } from 'react'
 import { contact, hero, ticker, why, journey, projects, skills, soft, process } from './content'
 
 const NAV = [
-  ['why', 'Why me'],
-  ['story', 'Journey'],
-  ['work', 'Work'],
-  ['skills', 'Skills'],
-  ['process', 'Process'],
+  ['story', 'My story'],
+  ['work', 'Selected work'],
+  ['why', 'Approach'],
+  ['contact', 'Contact'],
 ]
+
+const projectOrder = ['futuredev', 'aios', 'linkedin', 'sites', 'mcad', 'research', 'invest']
+const orderedProjects = [...projects].sort((a, b) => projectOrder.indexOf(a.id) - projectOrder.indexOf(b.id))
 
 /* ---------- motion hooks ---------- */
 function useReveal() {
@@ -122,13 +124,14 @@ export default function App() {
   return (
     <>
       <div id="progress" aria-hidden="true" />
+      <a className="skip-link" href="#story">Skip to my story</a>
       <header className="nav">
         <div className="wrap row">
           <a href="#top" className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>Humo<b>.</b></a>
           <button className="burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>{open ? '✕' : '☰'}</button>
           <nav className={'links' + (open ? ' open' : '')}>
             {NAV.map(([id, l]) => <a key={id} href={'#' + id} onClick={() => setOpen(false)}>{l}</a>)}
-            <a className="btn primary" href="#contact" onClick={() => setOpen(false)} style={{ padding: '9px 18px' }}>Work with me</a>
+            <a className="btn primary" href="#contact" onClick={() => setOpen(false)} style={{ padding: '9px 18px' }}>Get in touch</a>
           </nav>
         </div>
       </header>
@@ -148,14 +151,14 @@ export default function App() {
                 </h1>
                 <p className="lead fade-up" style={{ marginBottom: 28, '--d': '0.9s' }}>{hero.sub}</p>
                 <div className="fade-up" style={{ display: 'flex', gap: 12, flexWrap: 'wrap', '--d': '1.05s' }}>
-                  <a className="btn primary shine" href="#work">See the work →</a>
-                  <a className="btn" href="#contact">Start a conversation</a>
+                  <a className="btn primary shine" href="#story">Read my story →</a>
+                  <a className="btn" href="#work">Explore the work</a>
                 </div>
               </div>
               <div className="portrait-wrap fade-up" style={{ '--d': '0.5s' }}>
                 <div className="portrait" id="portrait">
                   <img src="/humo.jpg" alt="Lehumo Manala" width="1280" height="1120" fetchpriority="high" />
-                  <div className="badge"><b>Lehumo "Humo" Manala</b><br />BEngTech Metallurgy · Founder, Patterniaq</div>
+                  <div className="badge"><b>Lehumo “Humo” Manala</b><br />Engineering student · Founder, Patterniaq</div>
                 </div>
               </div>
             </div>
@@ -175,24 +178,22 @@ export default function App() {
           </div>
         </div>
 
-        <section id="why">
-          <div className="wrap">
-            <Head eyebrow="01 / Why work with me" title="Four reasons, each with a receipt." lead="Plenty of people can wire up an automation. Here is what you get that is different." />
-            <div className="grid g2">
-              {why.map((w, i) => (
-                <div className="card spot reveal" key={w.t} style={{ '--d': (i % 2) * 0.1 + 's' }}>
-                  <div className="num">0{i + 1}</div>
-                  <h3 style={{ marginTop: 8 }}>{w.t}</h3>
-                  <p>{w.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section id="story" style={{ background: 'var(--bg2)' }}>
           <div className="wrap">
-            <Head eyebrow="02 / How I got here" title="From selling candy to building systems." lead="Every step showed me the same thing: people repeat work by hand, and creating value is how you get paid. That is what I build for now." />
+            <div className="story-intro reveal">
+              <div>
+                <div className="eyebrow">01 / The person behind the systems</div>
+                <h2 className="sec">A builder shaped by business, service and engineering.</h2>
+                <p>I started by selling sweets at school. In high school, I learned how referrals and resale work. Later, while studying, I worked in a bar and helped manage shifts for an events and craft-beer business. Bookings, stock, staffing and follow-up lived in chats and in people’s heads.</p>
+                <p>That experience gave me a problem to solve: useful work was being repeated manually, while customers waited for an answer. I taught myself cloud infrastructure and AI tools so I could build the systems I wished we had. Today I study metallurgical engineering at Tshwane University of Technology and build Patterniaq alongside it.</p>
+                <p>The connection is practical. Engineering taught me to measure before claiming a result. Service work taught me to design for the person who has to use the system on a busy day. Both shape what I build now.</p>
+              </div>
+              <figure className="story-image">
+                <img src="https://images.pexels.com/photos/15947586/pexels-photo-15947586/free-photo-of-men-working-in-a-factory.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Workers carrying out metal fabrication in a factory" loading="lazy" />
+                <figcaption>Engineering as a way of seeing. Editorial image by <a href="https://www.pexels.com/photo/men-working-in-a-factory-15947586/" target="_blank" rel="noreferrer">Hoang NC / Pexels</a>; this is not a photograph of me or my workplace.</figcaption>
+              </figure>
+            </div>
+            <Head eyebrow="The journey" title="From selling sweets to building systems." lead="Each step taught me something about value, operations and ownership. Here is the longer version." />
             <div className="timeline" id="tl">
               <div className="tl-line" />
               {journey.map((j, i) => (
@@ -210,8 +211,8 @@ export default function App() {
 
         <section id="work">
           <div className="wrap">
-            <Head eyebrow="03 / Selected work" title="Systems I have built, and what they did." lead="Real builds, real numbers. Where something failed, it says so." />
-            {projects.map((p) => (
+            <Head eyebrow="02 / Selected work" title="The work behind the story." lead="Client delivery, internal systems and experiments. I show the method and the result, including what did not work." />
+            {orderedProjects.map((p) => (
               <article className="proj reveal" key={p.id}>
                 <div>
                   <div className="eyebrow">{p.tag}</div>
@@ -246,9 +247,24 @@ export default function App() {
           </div>
         </section>
 
+        <section id="why">
+          <div className="wrap">
+            <Head eyebrow="03 / How I work" title="Build with care. Prove what works." lead="My engineering training shows up in the way I diagnose, test and hand over software." />
+            <div className="grid g2">
+              {why.map((w, i) => (
+                <div className="card spot reveal" key={w.t} style={{ '--d': (i % 2) * 0.1 + 's' }}>
+                  <div className="num">0{i + 1}</div>
+                  <h3 style={{ marginTop: 8 }}>{w.t}</h3>
+                  <p>{w.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="skills" style={{ background: 'var(--bg2)' }}>
           <div className="wrap">
-            <Head eyebrow="04 / Skills" title="Hard skills, and the soft ones that make them useful." />
+            <Head eyebrow="04 / Capabilities" title="Tools I use, and the habits that make them useful." />
             <div className="grid g3" style={{ marginBottom: 44 }}>
               {skills.map((s, i) => (
                 <div className="card spot reveal" key={s.g} style={{ '--d': (i % 3) * 0.08 + 's' }}>
@@ -270,7 +286,7 @@ export default function App() {
 
         <section id="process">
           <div className="wrap">
-            <Head eyebrow="05 / How we would work" title="Diagnose first. Build small. Hand over running." />
+            <Head eyebrow="05 / Working together" title="Diagnose first. Build small. Hand over running." />
             <div className="grid g4">
               {process.map((s, i) => (
                 <div className="step reveal" key={s.n} style={{ '--d': i * 0.1 + 's' }}>
@@ -287,9 +303,9 @@ export default function App() {
           <div className="wrap">
             <div className="contact-box reveal">
               <div className="glow" style={{ width: 380, height: 380, background: '#ff6a1f', top: -180, left: '35%', opacity: 0.25 }} />
-              <div className="eyebrow" style={{ position: 'relative' }}>06 / Contact</div>
+              <div className="eyebrow" style={{ position: 'relative' }}>06 / Connect from anywhere</div>
               <h2 className="sec" style={{ position: 'relative' }}>Got a process that eats your week?</h2>
-              <p className="lead" style={{ position: 'relative' }}>Tell me where the time goes. I will come back with a diagnosis, not a sales pitch.</p>
+              <p className="lead" style={{ position: 'relative' }}>Based in South Africa and open to remote collaborations. Tell me where the time goes and what a useful outcome would look like.</p>
               <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', position: 'relative' }}>
                 {contact.email && <a className="btn primary shine" href={'mailto:' + contact.email}>Email me</a>}
                 <a className="btn" href={contact.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
@@ -303,10 +319,12 @@ export default function App() {
 
       <footer>
         <div className="wrap" style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-          <span>© 2026 Lehumo Manala · Johannesburg, South Africa</span>
-          <span className="mono">Every claim here has a receipt.</span>
+          <span>© 2026 Lehumo Manala · Pretoria, South Africa</span>
+          <span className="mono">Built with curiosity, measured with care.</span>
         </div>
       </footer>
     </>
   )
 }
+
+
