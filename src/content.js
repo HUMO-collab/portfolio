@@ -9,7 +9,7 @@ export const contact = {
 }
 
 export const hero = {
-  kicker: 'Pretoria, South Africa · working across borders',
+  kicker: 'Pretoria, South Africa · open to remote collaboration',
   title: ['From the shop floor', 'to systems that', 'keep working.'],
   sub: 'I’m Lehumo “Humo” Manala: a metallurgical engineering student and the founder of Patterniaq. I build practical AI and automation systems for the repetitive work that slows growing businesses down.',
   stats: [
